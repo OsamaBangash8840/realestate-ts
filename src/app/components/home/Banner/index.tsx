@@ -16,7 +16,7 @@ export const HomeBanner = () => {
       >
         <SwiperSlide>
           <div
-            className="bg-secondary h-[450px] md:h-[580px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
+            className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
             style={{
               backgroundImage: `url('/home/banner1.jpg')`, // Fixed: Added url() wrapper
             }}
@@ -48,7 +48,7 @@ export const HomeBanner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="bg-secondary h-[450px] md:h-[580px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
+            className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
             style={{
               backgroundImage: `url('/home/banner4.jpg')`, // Fixed: Added url() wrapper
             }}
@@ -80,7 +80,7 @@ export const HomeBanner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="bg-secondary h-[450px] md:h-[580px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
+            className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
             style={{
               backgroundImage: `url('/home/banner5.jpg')`, // Fixed: Added url() wrapper
             }}

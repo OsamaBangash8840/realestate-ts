@@ -49,11 +49,12 @@ const ARROW_STYLES: Record<ArrowStyleType, ArrowConfig> = {
   default: {
     leftIcon: FaChevronLeft,
     rightIcon: FaChevronRight,
-    buttonClass: 'bg-slate-100 flex justify-center items-center h-9 w-9 rounded-[2rem]',
-    containerClass:
-      'bg-white top-1/2 -translate-y-1/2 z-40 h-12 w-12 rounded-[2rem] flex justify-center items-center',
-    iconClass: 'text-gray-500',
+    buttonClass:
+      'bg-white border border-gray-200 flex justify-center items-center h-9 w-9 rounded-[2rem]',
+    containerClass: 'absolute top-0 right-0 z-50', // anchors to top-right
+    iconClass: 'text-secondary-500',
   },
+
   minimal: {
     leftIcon: FaChevronLeft,
     rightIcon: FaChevronRight,
@@ -129,8 +130,11 @@ export const CustomSwiper: React.FC<CustomSwiperProps> = ({
   const LeftIcon = arrowConfig.leftIcon
   const RightIcon = arrowConfig.rightIcon
 
+  // For default style, use special positioning
+  const isDefaultStyle = arrowStyle === 'default'
+
   return (
-    <div className="min-h-44 overflow-x-hidden">
+    <div className="min-h-44 ">
       <div className="relative">
         <Swiper
           ref={swiperRef}
@@ -148,41 +152,66 @@ export const CustomSwiper: React.FC<CustomSwiperProps> = ({
             1330: { slidesPerView: slidesOnLargeScreens },
           }}
           pagination={showPagination ? { clickable: true } : false}
+          className="overflow-x-hidden"
         >
           {children}
         </Swiper>
         {showButtons && (
           <>
-            {/* Left Arrow */}
-            <div className={`${arrowConfig.containerClass} ${leftArrowPosition} absolute`}>
-              <button
-                className={arrowConfig.buttonClass}
-                onClick={goToPrevSlide}
-                type="button"
-                aria-label="Previous slide"
-              >
-                <LeftIcon className={arrowConfig.iconClass} />
-              </button>
-            </div>
-
-            {/* Pause Icon - only for minimal style */}
-            {arrowStyle === 'minimal' && (
-              <div className="absolute bottom-4 left-11 sm:left-24 z-40 h-8 w-8 flex justify-center items-center">
-                <FaRegCirclePause className="text-white text-[24px] hover:text-white/30 transition-colors cursor-pointer" />
+            {isDefaultStyle ? (
+              // Special handling for default style - both arrows in top-right corner
+              <div className="absolute top-[-20%] sm:top-[-14%] 2xl:top-[-10%] right-0 flex gap-2 z-50">
+                <button
+                  className={arrowConfig.buttonClass}
+                  onClick={goToPrevSlide}
+                  type="button"
+                  aria-label="Previous slide"
+                >
+                  <LeftIcon className={arrowConfig.iconClass} />
+                </button>
+                <button
+                  className={arrowConfig.buttonClass}
+                  onClick={goToNextSlide}
+                  type="button"
+                  aria-label="Next slide"
+                >
+                  <RightIcon className={arrowConfig.iconClass} />
+                </button>
               </div>
-            )}
+            ) : (
+              <>
+                {/* Left Arrow */}
+                <div className={`${arrowConfig.containerClass} ${leftArrowPosition} absolute`}>
+                  <button
+                    className={arrowConfig.buttonClass}
+                    onClick={goToPrevSlide}
+                    type="button"
+                    aria-label="Previous slide"
+                  >
+                    <LeftIcon className={arrowConfig.iconClass} />
+                  </button>
+                </div>
 
-            {/* Right Arrow */}
-            <div className={`${arrowConfig.containerClass} ${rightArrowPosition} absolute`}>
-              <button
-                className={arrowConfig.buttonClass}
-                onClick={goToNextSlide}
-                type="button"
-                aria-label="Next slide"
-              >
-                <RightIcon className={arrowConfig.iconClass} />
-              </button>
-            </div>
+                {/* Pause Icon - only for minimal style */}
+                {arrowStyle === 'minimal' && (
+                  <div className="absolute bottom-4 left-11 sm:left-24 z-40 h-8 w-8 flex justify-center items-center">
+                    <FaRegCirclePause className="text-white text-[24px] hover:text-white/30 transition-colors cursor-pointer" />
+                  </div>
+                )}
+
+                {/* Right Arrow */}
+                <div className={`${arrowConfig.containerClass} ${rightArrowPosition} absolute`}>
+                  <button
+                    className={arrowConfig.buttonClass}
+                    onClick={goToNextSlide}
+                    type="button"
+                    aria-label="Next slide"
+                  >
+                    <RightIcon className={arrowConfig.iconClass} />
+                  </button>
+                </div>
+              </>
+            )}
           </>
         )}
       </div>

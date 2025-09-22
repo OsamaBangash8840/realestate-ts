@@ -31,3 +31,13 @@ export interface IPropertyItems {
   inStock?: boolean
   description?: string
 }
+
+export interface IBlogPostItems {
+  id: string | number
+  title: string
+  date: string
+  readingTime?: string
+  description?: string
+  image: string // path or url
+  slug?: string
+}
