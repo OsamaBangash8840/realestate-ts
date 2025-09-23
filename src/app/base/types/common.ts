@@ -41,3 +41,11 @@ export interface IBlogPostItems {
   image: string // path or url
   slug?: string
 }
+
+export interface ITestimonialsItems {
+  name?: string
+  img?: string
+  country?: string
+  stars?: number
+  desc?: string
+}

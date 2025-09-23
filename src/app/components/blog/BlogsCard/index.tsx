@@ -21,7 +21,7 @@ export const BlogCard: React.FC<Props> = ({ post, layout = 'grid' }) => {
         className={
           layout === 'grid'
             ? 'relative w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden'
-            : 'relative w-[160px] h-[160px] rounded-lg overflow-hidden flex-shrink-0'
+            : 'relative w-[190px] h-[190px] rounded-lg overflow-hidden flex-shrink-0'
         }
       >
         <Image

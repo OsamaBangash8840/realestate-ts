@@ -10,6 +10,8 @@ import { SwiperSlide } from 'swiper/react'
 import { VideoSection } from '../VideoSection'
 import { BlogsGrid } from '../Blogs'
 import { HomeContact } from '../HomeContact'
+import { TestimonialGrid } from '../Testimonials'
+import { OurCertifications } from '../OurCertifications'
 
 export const MainHome = () => {
   return (
@@ -79,6 +81,8 @@ export const MainHome = () => {
       </section>
       <BlogsGrid />
       <HomeContact />
+      <OurCertifications />
+      <TestimonialGrid />
     </>
   )
 }

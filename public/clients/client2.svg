@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<g id="BACKGROUND">
+	<rect x="0" style="fill:#FFFFFF;" width="499.999" height="500"/>
+</g>
+<g id="OBJECTS">
+	<g>
+		<polygon style="fill:#3B4051;" points="287.537,151.014 245.918,102.733 204.3,151.014 245.918,199.295 240.606,205.458 
+			222.452,184.4 204.3,205.459 245.918,253.74 287.538,205.459 245.918,157.176 251.182,151.149 269.384,172.072 		"/>
+		<polygon style="fill:#FF2424;" points="198.987,211.622 245.918,266.067 292.85,211.622 311.003,232.681 245.918,308.185 
+			180.834,232.68 		"/>
+		<polygon style="fill:#3B4051;" points="198.987,157.177 180.834,178.236 198.987,199.295 217.139,178.236 		"/>
+		<polygon style="fill:#FF2424;" points="157.369,205.458 175.521,226.517 193.674,205.459 175.522,184.4 		"/>
+		<polygon style="fill:#3B4051;" points="274.698,178.236 292.85,157.177 311.004,178.236 292.85,199.295 		"/>
+		<polygon style="fill:#FF2424;" points="298.164,205.459 316.316,184.4 334.469,205.458 316.316,226.517 		"/>
+		<g>
+			<polygon style="fill:#3B4051;" points="242.161,315.402 157.369,217.035 157.369,234.883 242.161,333.251 			"/>
+			<polygon style="fill:#3B4051;" points="249.676,315.402 249.676,333.251 334.469,234.883 334.469,217.035 			"/>
+		</g>
+	</g>
+</g>
+<g id="TEXTS">
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 144.4441 376.5246)"><tspan x="0" y="0" style="fill:#3B4051; font-family:'Outfit-ExtraBold'; font-size:41.7059px;">name</tspan><tspan x="107.016" y="0" style="fill:#FF2424; font-family:'Outfit-ExtraBold'; font-size:41.7059px;">logo</tspan></text>
+			<g>
+				
+					<text transform="matrix(1 0 0 1 174.0447 393.7844)" style="fill:#3B4051; font-family:'Lato-Regular'; font-size:12.9752px; letter-spacing:2;">tagline goes here</text>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
