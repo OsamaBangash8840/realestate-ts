@@ -145,7 +145,7 @@ export const Footer = () => {
           weight="regular"
           color="custom"
           customColor="text-secondary-300"
-          className="mx-auto sm:mx-0"
+          className="flex justify-center items-center sm:mx-0"
         >
           Copyright © 2025 POLYSAVE, All Rights Reserved.
         </Typography>

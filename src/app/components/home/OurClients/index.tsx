@@ -50,7 +50,7 @@ export const OurClients = () => {
       </div> */}
       <div className="px-3 sm:px-28">
         <CustomSwiper
-          slidesOnPhone={3}
+          slidesOnPhone={2}
           slidesOnTablet={4}
           slidesOnDesktop={5}
           slidesOnLargeScreens={6}

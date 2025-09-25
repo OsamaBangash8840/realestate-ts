@@ -141,11 +141,13 @@ export const CustomSwiper: React.FC<CustomSwiperProps> = ({
           modules={[Pagination, Autoplay]}
           spaceBetween={25}
           speed={500}
+          slidesPerView={slidesOnPhone} // Set default slidesPerView
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           breakpoints={{
+            0: { slidesPerView: slidesOnPhone }, // Add breakpoint for very small screens
             395: { slidesPerView: slidesOnPhone },
             750: { slidesPerView: slidesOnTablet },
             1024: { slidesPerView: slidesOnDesktop },
