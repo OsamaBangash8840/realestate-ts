@@ -3,7 +3,13 @@ import Breadcrumbs from '@/app/components/common/BreadCrumbs'
 import { FiltersSidebar, PropertiesGrids } from '@/app/components/properties'
 import { IoIosArrowDown } from 'react-icons/io'
 
-export default function CategoryPage({ params }: { params: { categoryId: string } }) {
+interface CategoryPageProps {
+  params: Promise<{ categoryId: string }>
+}
+
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { categoryId } = await params
+
   return (
     <div className="sm:px-16 px-3 pt-6">
       <Breadcrumbs />
@@ -12,7 +18,7 @@ export default function CategoryPage({ params }: { params: { categoryId: string 
         <div>
           <div className="flex justify-between">
             <Typography variant="h6" weight="bold" className="uppercase pb-2">
-              {params.categoryId}
+              {categoryId}
             </Typography>
             <div className="flex gap-7">
               <Typography variant="large" weight="regular" className="cursor-pointer">
