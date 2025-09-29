@@ -29,7 +29,7 @@ export const PropertiesCard = ({ property }: IPropertyProps) => {
           alt={property.title || 'Product image'}
           width={400}
           height={190}
-          className="w-[400px] h-[190px] 2xl:w-full 2xl:h-full rounded-2xl object-cover"
+          className="w-[400px] h-[190px] 2xl:w-full 2xl:h-[220px] rounded-2xl object-cover"
         />
 
         {discountPercentage > 0 && (

@@ -13,15 +13,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="sm:px-16 px-3 pt-6">
       <Breadcrumbs />
-      <div className="flex gap-2 mt-10">
-        <FiltersSidebar />
+      <div className="flex gap-1 mt-10">
+        <div className="hidden xl:block">
+          <FiltersSidebar />
+        </div>
         <div>
-          <div className="flex justify-between">
+          {/* {xl Screens} */}
+          <div className="xl:flex justify-between hidden ">
             <Typography variant="h6" weight="bold" className="uppercase pb-2">
               {categoryId}
             </Typography>
             <div className="flex gap-7">
-              <Typography variant="large" weight="regular" className="cursor-pointer">
+              <Typography variant="large" weight="regular" className="cursor-pointer mt-1">
                 Sort By
               </Typography>
               <Dropdown
@@ -29,7 +32,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   <Typography
                     variant="large"
                     weight="regular"
-                    className="flex gap-3 justify-center items-center cursor-pointer"
+                    className="flex gap-3 justify-center items-center cursor-pointer bg-white rounded-[99px] shadow-one px-4 py-1"
                   >
                     Best Selling
                     <IoIosArrowDown size={18} />
@@ -39,7 +42,37 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               />
             </div>
           </div>
-          <PropertiesGrids />
+
+          <div className="block xl:hidden">
+            <Typography variant="h6" weight="bold" className="uppercase pb-2">
+              {categoryId}
+            </Typography>
+            <div className="flex justify-between">
+              <div className="flex gap-7">
+                <Typography variant="large" weight="regular" className="cursor-pointer mt-1 ">
+                  Sort By
+                </Typography>
+                <Dropdown
+                  button={
+                    <Typography
+                      variant="large"
+                      weight="regular"
+                      className="flex gap-3 justify-center items-center cursor-pointer bg-white rounded-[99px] shadow-one px-4 py-1"
+                    >
+                      Best Selling
+                      <IoIosArrowDown size={18} />
+                    </Typography>
+                  }
+                  options={[{ label: 'View Profile', href: '' }]}
+                />
+              </div>
+              <FiltersSidebar />
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <PropertiesGrids />
+          </div>
           <Pagination />
         </div>
         {/* Fetch and show properties for this category */}

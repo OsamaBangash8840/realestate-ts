@@ -40,7 +40,7 @@ export const HomeContact = () => {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="rounded-2xl w-full h-[420px] sm:w-[600px] sm:h-[450px] 2xl:w-[750px]  mt-5 sm:mt-0 [@media(min-width:1750px)]:w-[900px] [@media(min-width:1750px)]:h-[600px]"
+          className="rounded-2xl w-full h-[420px] md:w-[400px] md:h-[450px] lg:w-[600px] lg:h-[450px] 2xl:w-[750px]  mt-5 sm:mt-0 [@media(min-width:1750px)]:w-[900px] [@media(min-width:1750px)]:h-[600px]"
         ></iframe>
       </div>
     </section>

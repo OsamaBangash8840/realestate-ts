@@ -1,3 +1,6 @@
 export * from './PropertiesCard'
 export * from './FiltersSidebar'
 export * from './PropertiesGrids'
+export * from './SingleProperty'
+export * from './SingleProductFeatures'
+export * from './SpecificationsGrid'

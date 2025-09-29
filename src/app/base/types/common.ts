@@ -5,7 +5,9 @@ export interface IMenuItem {
   iconActive?: React.ReactNode
   darkIcon?: React.ReactNode
 }
-
+export interface IFilterItem {
+  title: string
+}
 export interface ICategoriesItem {
   title?: string
   icon?: string

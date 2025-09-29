@@ -11,6 +11,8 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.5,
     reviews: 128,
     inStock: true,
+    description:
+      'High-density polyethylene underground water storage tank with superior durability and corrosion resistance. Perfect for residential and commercial applications with a capacity of 5000 liters. Features UV protection and comes with a 10-year warranty.',
   },
   {
     id: 2,
@@ -21,6 +23,8 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.2,
     reviews: 89,
     inStock: true,
+    description:
+      'Glass Reinforced Plastic panels designed for water tank construction. Lightweight yet extremely strong, these panels offer excellent chemical resistance and long-lasting performance. Ideal for creating custom-sized water storage solutions.',
   },
   {
     id: 3,
@@ -32,10 +36,12 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Premium quality GRP panels with enhanced fire resistance properties. Suitable for office building water storage systems. Easy to install and maintain, with excellent structural integrity and resistance to environmental factors.',
   },
   {
     id: 4,
-    title: 'PolySave GRP Panels',
+    title: 'PolySave Modular Water Tank',
     price: 79.99,
     originalPrice: 99.99,
     image: '/home/banner5.jpg',
@@ -43,10 +49,12 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Innovative modular water storage system that can be customized to fit any space. Made from food-grade materials, ensuring safe drinking water storage. Features easy assembly and expandable design for future capacity increases.',
   },
   {
     id: 5,
-    title: 'PolySave GRP Panels',
+    title: 'PolySave Overhead Tank',
     price: 79.99,
     originalPrice: 99.99,
     image: '/home/banner1.jpg',
@@ -54,10 +62,12 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Durable overhead water tank with triple-layer construction for maximum strength and insulation. Prevents algae growth with UV stabilized material. Comes with installation kit and is suitable for rooftop mounting in commercial buildings.',
   },
   {
     id: 6,
-    title: 'PolySave GRP Panels',
+    title: 'PolySave Industrial Tank',
     price: 79.99,
     originalPrice: 99.99,
     image: '/home/banner2.jpg',
@@ -65,10 +75,12 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Heavy-duty industrial water storage tank built for demanding applications. Features reinforced construction, chemical resistance, and high-temperature tolerance. Perfect for factories, warehouses, and large-scale commercial operations.',
   },
   {
     id: 7,
-    title: 'PolySave GRP Panels',
+    title: 'PolySave Slim Line Tank',
     price: 79.99,
     originalPrice: 99.99,
     image: '/home/banner3.jpg',
@@ -76,10 +88,12 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Space-saving slim line water tank designed for narrow spaces and tight installations. Maintains large capacity while occupying minimal floor space. Ideal for urban properties with limited space availability.',
   },
   {
     id: 8,
-    title: 'PolySave GRP Panels',
+    title: 'PolySave Rainwater Harvesting System',
     price: 79.99,
     originalPrice: 99.99,
     image: '/home/banner4.jpg',
@@ -87,10 +101,12 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Complete rainwater harvesting and storage solution with integrated filtration system. Eco-friendly design helps reduce water bills and environmental impact. Includes automatic overflow management and maintenance-free operation.',
   },
   {
     id: 9,
-    title: 'PolySave GRP Panels',
+    title: 'PolySave Portable Water Tank',
     price: 79.99,
     originalPrice: 99.99,
     image: '/home/banner5.jpg',
@@ -98,5 +114,7 @@ export const MockProperties: IPropertyItems[] = [
     rating: 4.7,
     reviews: 203,
     inStock: false,
+    description:
+      'Flexible and portable water storage solution for temporary or emergency water needs. Collapsible design for easy transportation and storage when not in use. Made from tear-resistant, food-safe materials with quick setup capability.',
   },
 ]
