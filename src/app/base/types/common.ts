@@ -51,3 +51,14 @@ export interface ITestimonialsItems {
   stars?: number
   desc?: string
 }
+
+// types.ts
+export interface ICartItem {
+  id: string
+  title: string
+  price: number
+  image: string
+  category: string
+}
+
+export type ICartItems = ICartItem[]

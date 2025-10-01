@@ -51,7 +51,7 @@ export const TestimonialGrid = () => {
   )
 }
 
-const TestimonialCard = ({ name, img, country, desc, stars }: ITestimonialsItems) => (
+export const TestimonialCard = ({ name, img, country, desc, stars }: ITestimonialsItems) => (
   <div className="p-4 bg-white rounded-2xl border border-gray-100 mt-8 sm:mt-0">
     <div className="flex items-center mb-3">
       <Image src={img || ''} alt={name || ''} width={60} height={60} className="rounded-full" />
@@ -74,6 +74,40 @@ const TestimonialCard = ({ name, img, country, desc, stars }: ITestimonialsItems
     </div>
 
     <Typography variant="large" weight="regular">
+      {desc}
+    </Typography>
+  </div>
+)
+
+export const TestimonialPropertyCard = ({
+  name,
+  img,
+  country,
+  desc,
+  stars,
+}: ITestimonialsItems) => (
+  <div className="p-4 bg-white rounded-2xl mt-8 sm:mt-0">
+    <div className="flex items-center mb-3">
+      <Image src={img || ''} alt={name || ''} width={56} height={56} className="rounded-full" />
+      <div className="ml-3">
+        <Typography variant="h6" weight="bold">
+          {name}
+        </Typography>
+        <Typography variant="xlarge" weight="regular" className="mt-0">
+          {country}
+        </Typography>
+      </div>
+    </div>
+
+    <div className="flex mb-2 gap-3">
+      <FaStar className={1 <= (stars ?? 0) ? 'text-yellow-400' : 'text-gray-300'} size={24} />
+      <FaStar className={2 <= (stars ?? 0) ? 'text-yellow-400' : 'text-gray-300'} size={24} />
+      <FaStar className={3 <= (stars ?? 0) ? 'text-yellow-400' : 'text-gray-300'} size={24} />
+      <FaStar className={4 <= (stars ?? 0) ? 'text-yellow-400' : 'text-gray-300'} size={24} />
+      <FaStar className={5 <= (stars ?? 0) ? 'text-yellow-400' : 'text-gray-300'} size={24} />
+    </div>
+
+    <Typography variant="xlarge" weight="medium">
       {desc}
     </Typography>
   </div>

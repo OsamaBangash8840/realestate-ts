@@ -8,7 +8,7 @@ import { SlBadge } from 'react-icons/sl'
 export const FeaturesList = () => {
   return (
     <section className="">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
+      <div className="grid grid-cols-2 gap-4 mt-5">
         <FeaturesCard title="Appartment" icon={<SlBadge />} />
         <FeaturesCard title="Appartment" icon={<GoTrophy />} />
         <FeaturesCard title="24 Hour Support" icon={<MdSupportAgent />} />

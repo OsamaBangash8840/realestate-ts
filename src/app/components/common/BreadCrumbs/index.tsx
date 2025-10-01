@@ -7,7 +7,6 @@ export default function Breadcrumbs() {
   const pathname = usePathname()
   const pathParts = pathname.split('/').filter((part) => part !== '')
 
-  // Use pathParts directly (don’t slice)
   const cleanedParts = pathParts
 
   const formatText = (text: string) => {
@@ -15,7 +14,7 @@ export default function Breadcrumbs() {
   }
 
   return (
-    <nav className="flex items-center space-x-2 text-[16px] text-secondary-500">
+    <nav className="flex flex-wrap justify-center sm:justify-start items-center gap-x-2 gap-y-1 text-[14px] sm:text-[16px] text-secondary-500 break-words">
       {/* Home */}
       <Link href="/" className="flex items-center text-sm space-x-2 text-brand hover:text-brand/50">
         <span>Home</span>

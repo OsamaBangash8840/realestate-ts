@@ -20,7 +20,7 @@ const SinglePropertyPage = async ({ params }: PageProps) => {
   }
 
   return (
-    <div className="sm:px-16 px-3">
+    <div className=" lg:px-16 md:px-10 px-3">
       <div className="mt-5">
         <Breadcrumbs />
       </div>
