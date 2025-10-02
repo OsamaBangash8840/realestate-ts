@@ -19,7 +19,7 @@ export function CartSidebar({ items }: CartItemProps) {
   const total = subtotal - discount + tax
 
   return (
-    <div className=" p-6 space-y-6 sticky top-4">
+    <div className=" p-3 sm:p-6 space-y-6 sticky top-4">
       <Typography variant="h6" weight="bold">
         Cart Summary
       </Typography>

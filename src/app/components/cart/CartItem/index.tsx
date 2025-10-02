@@ -15,20 +15,20 @@ interface CartItemProps {
 export const CartItem = ({ item }: CartItemProps) => {
   const [number, setNumber] = useState(0)
   return (
-    <div className="flex px-0.5 mt-3 py-2 gap-10 rounded-[14px] shadow-one">
+    <div className="flex px-0.5 mt-3 py-2 gap-5 sm:gap-10 rounded-[14px] shadow-one">
       <div className="relative flex-shrink-0">
         <Image
           src={item.image}
           alt={item.title}
           width={250}
           height={200}
-          className="object-cover rounded-2xl w-[250px] h-[200px]"
+          className="object-cover rounded-2xl w-[160px] h-[190px] sm:w-[250px] sm:h-[200px]"
         />
       </div>
 
       <div className="flex-1">
         <Typography variant="xlarge"> {item.category}</Typography>
-        <Typography variant="h6" weight="bold" className="mt-5">
+        <Typography variant="h6" weight="bold" className=" mt-2.5 sm:mt-5">
           {item.title}
         </Typography>
         <Typography variant="large" weight="medium" className="mt-3">
@@ -42,7 +42,7 @@ export const CartItem = ({ item }: CartItemProps) => {
       </div>
 
       <button className="text-red-500 hover:text-red-700 p-2 h-fit">
-        <CiTrash size={26} className="" />
+        <CiTrash size={26} className="-mt-2 sm:-mt-0" />
       </button>
     </div>
   )

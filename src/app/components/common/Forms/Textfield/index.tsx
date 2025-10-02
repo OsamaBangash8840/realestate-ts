@@ -6,6 +6,8 @@ interface ITextFieldProps {
   label?: string
   className?: string
   type?: string
+  value?: string
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 export const TextField = ({
   icon,
@@ -13,6 +15,8 @@ export const TextField = ({
   className,
   label,
   type = 'text',
+  value,
+  onChange,
   ...rest
 }: ITextFieldProps): React.ReactElement => {
   return (
@@ -25,6 +29,8 @@ export const TextField = ({
         <input
           type={type}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
           className="placeholder:text-secondary-500 text-secondary-500 text-base flex-1 outline-none"
           {...rest}
         />
