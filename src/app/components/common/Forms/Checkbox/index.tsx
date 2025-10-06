@@ -12,34 +12,26 @@ interface ITextFieldProps {
 }
 export const Checkbox = ({
   icon,
-  placeholder,
-  className,
   label,
-  type = 'text',
-  value,
+  type = 'checkbox',
   onChange,
-  ...rest
 }: ITextFieldProps): React.ReactElement => {
   return (
-    <div className="flex justify-between gap-4  w-full ">
-      {icon && <span className="text-secondary-500 text-[24px]">{icon}</span>}
-      {label && (
-        <Typography variant="xlarge" className=" text-secondary-500">
-          {label}
-        </Typography>
-      )}
-      <div
-        className={`w-full h-[52px] flex justify-end gap-x-3  rounded-[57px] shadow-one px-4 ${className}`}
-      >
-        <input
-          type={type}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-          className="w-[22px] h-[22px] text-primary-500 border-2 border-gray-300 cursor-pointer rounded-full focus:ring-brand appearance-none checked:bg-primary-500 checked:border-primary-500 relative checked:after:content-['o'] checked:after:text-white checked:after:text-xs checked:after:absolute checked:after:top-0 checked:after:left-0 checked:after:w-full checked:after:h-full checked:after:flex checked:after:items-center checked:after:justify-center"
-          {...rest}
-        />
+    <div className="flex justify-between gap-4 w-full shadow-one py-5 px-3.5 rounded-[14px] mt-2">
+      <div className="flex gap-4 items-center">
+        {icon && <span className="text-secondary-500 text-[24px]">{icon}</span>}
+        {label && (
+          <Typography variant="xlarge" className="text-secondary-500">
+            {label}
+          </Typography>
+        )}
       </div>
+
+      <input
+        type={type}
+        onChange={onChange}
+        className="w-[22px] h-[22px] cursor-pointer rounded-full appearance-none border-2 border-gray-300 focus:ring-2 focus:ring-secondary-500 focus:ring-offset-1 checked:border-[4px] checked:border-white checked:bg-secondary-500 transition-all"
+      />
     </div>
   )
 }

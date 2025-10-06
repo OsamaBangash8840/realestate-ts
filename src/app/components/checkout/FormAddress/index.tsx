@@ -22,7 +22,7 @@ export const FormAddress = (): React.ReactElement => {
   }
 
   return (
-    <div className="w-full mt-5">
+    <div className="w-full mt-7">
       {/* Header */}
       <div className="flex justify-between items-center">
         <Typography variant="h6" weight="bold">

@@ -1,4 +1,7 @@
+'use client'
+import { usePathname } from 'next/navigation'
 import { Button, Typography } from '../../common'
+import { IoShieldOutline } from 'react-icons/io5'
 
 interface PriceBreakdownProps {
   subtotal: number
@@ -8,6 +11,7 @@ interface PriceBreakdownProps {
 }
 // src/components/cart/PriceBreakdown.tsx
 export function PriceBreakdown({ subtotal, discount, tax, total }: PriceBreakdownProps) {
+  const pathname = usePathname()
   return (
     <div className="">
       {/* <h3 className="font-semibold text-lg">Order Summary</h3> */}
@@ -45,11 +49,17 @@ export function PriceBreakdown({ subtotal, discount, tax, total }: PriceBreakdow
             <span>-${discount.toLocaleString()}</span>
           </div>
         )}
-
-        <Typography variant="large" weight="regular" className="mt-5 rounded-xl shadow-one p-3">
-          For Bottled water & Tissue Free Shipping for above 100.00 . (For Water Tanks, the delivery
-          is as per the production.) For Road Barriers free shipping for above 50pcs
-        </Typography>
+        {pathname === '/cart' ? (
+          <Typography variant="large" weight="regular" className="mt-5 rounded-xl shadow-one p-3">
+            For Bottled water & Tissue Free Shipping for above 100.00 . (For Water Tanks, the
+            delivery is as per the production.) For Road Barriers free shipping for above 50pcs
+          </Typography>
+        ) : (
+          <Typography variant="large" weight="regular" className="mt-5 rounded-xl shadow-one p-3">
+            Payment Terms: Cash on Delivery is applicable for Tissue and Bottled Water only. For
+            more details please contact +971 50 7 400 400.
+          </Typography>
+        )}
 
         <div className=" pt-2 flex justify-between text-lg font-bold">
           <Typography variant="xlarge" weight="bold">
@@ -60,7 +70,22 @@ export function PriceBreakdown({ subtotal, discount, tax, total }: PriceBreakdow
           </Typography>
         </div>
       </div>
-      <Button title="Proceed to Checkout" className="w-full mt-5" />
+      {pathname === '/cart' ? (
+        <Button title="Proceed to Checkout" className="w-full mt-5" />
+      ) : (
+        <>
+          <Button title="Place Order" className="w-full mt-5" />
+          <div className="flex gap-3 items-center mt-5">
+            <IoShieldOutline size={24} />
+            <Typography variant="large">Security and Privacy</Typography>
+          </div>
+          <Typography variant="large" className="mt-3">
+            Our checkout is safe and secure. Your personal and payment information is securely
+            transmitted via 128-bit encryption. We do not store any payment card information on our
+            systems
+          </Typography>
+        </>
+      )}
     </div>
   )
 }
