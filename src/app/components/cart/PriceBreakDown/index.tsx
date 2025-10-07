@@ -9,7 +9,6 @@ interface PriceBreakdownProps {
   tax: number
   total: number
 }
-// src/components/cart/PriceBreakdown.tsx
 export function PriceBreakdown({ subtotal, discount, tax, total }: PriceBreakdownProps) {
   const pathname = usePathname()
   return (

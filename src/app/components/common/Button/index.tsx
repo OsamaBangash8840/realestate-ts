@@ -6,7 +6,7 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string
   className?: string
   loading?: boolean
-  variant?: 'outline' | 'primary' | 'cart'
+  variant?: 'outline' | 'primary' | 'cart' | 'services'
   icon?: React.ReactElement
   iconPosition?: 'left' | 'right'
 }
@@ -29,6 +29,7 @@ export const Button = ({
     primary:
       'rounded-full bg-primary-500 text-white hover:text-primary hover:bg-white hover:border hover:border-primary-500 hover:text-primary-500',
     cart: 'rounded-full bg-primary-100 text-secondary-500 hover:text-primary hover:bg-white hover:border hover:border-primary-500 hover:text-primary-500',
+    services: ' border-2 border-primary-500 text-primary-500 rounded-full ',
   }
 
   return (

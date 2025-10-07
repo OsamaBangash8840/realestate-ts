@@ -11,7 +11,7 @@ export const AchievementGrid = () => {
       <Typography variant="h5" weight="bold" className="mt-3">
         Achievement of POLYSAVE
       </Typography>
-      <div className="grid grid-cols-3 gap-5 mt-3">
+      <div className="sm:grid grid-cols-3 gap-5 mt-3">
         <AchievementCard icon={<CiMoneyBill size={24} />} name="Tanks Sold worldwide" />
         <AchievementCard icon={<CiMoneyBill size={24} />} name="Tanks Sold worldwide" />
         <AchievementCard icon={<CiMoneyBill size={24} />} name="Tanks Sold worldwide" />
@@ -28,7 +28,7 @@ interface IAchievementProps {
 const AchievementCard = ({ icon, name }: IAchievementProps) => {
   return (
     <>
-      <div className="bg-primary-100 rounded-[14px] py-4 px-3">
+      <div className="bg-primary-100 rounded-[14px] py-4 px-3 mt-4 sm:mt-0">
         <p className="bg-primary-200 rounded-[10px] px-3 py-1.5 w-[46px]">
           <span className="flex justify-center">{icon}</span>
         </p>

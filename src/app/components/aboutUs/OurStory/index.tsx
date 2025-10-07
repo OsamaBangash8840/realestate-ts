@@ -4,7 +4,7 @@ import { Typography } from '../../common'
 export const OurStory = () => {
   return (
     <>
-      <section className="flex gap-5 items-center sm:px-16 px-3 mt-6">
+      <section className="sm:flex gap-5 items-center sm:px-16 px-3 mt-6">
         <Image
           src={'/home/banner4.jpg'}
           alt="Our Story"

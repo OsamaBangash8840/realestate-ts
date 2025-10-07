@@ -22,14 +22,16 @@ export const Banner = ({
 }: ITextFieldProps): React.ReactElement => {
   return (
     <div
-      className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-10 pt-12"
+      className="bg-secondary h-[550px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-10 pt-12 overflow-x-hidden"
       style={{
         backgroundImage: `url(${bg})`, // ✅ Correct syntax
       }}
     >
-      <Breadcrumbs variant="secondary" />
+      <div className="-mt-10 sm:-mt-0 py-3 sm:py-0">
+        <Breadcrumbs variant="secondary" />
+      </div>
 
-      <div className="bg-primary-500/40 sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg mt-20">
+      <div className="bg-primary-500/40 sm:py-3 px-3 py-1.5 w-[390px] sm:w-[600px] rounded-lg  sm:mt-20">
         {smallHeading && (
           <Typography variant="large" weight="regular" color="primaryBody" className="uppercase">
             {smallHeading}

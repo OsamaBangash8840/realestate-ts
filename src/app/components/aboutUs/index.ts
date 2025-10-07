@@ -1,3 +1,7 @@
 export * from './AchievementGrid'
 export * from './Page'
 export * from './OurStory'
+export * from './AboutContact'
+export * from './VisionComponent'
+export * from './CompanyDetails'
+export * from './WhyChooseUs'

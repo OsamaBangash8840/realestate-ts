@@ -1,6 +1,10 @@
 import { Banner } from '../../common'
+import { AboutContact } from '../AboutContact'
 import { AchievementGrid } from '../AchievementGrid'
+import { CompanyDetails } from '../CompanyDetails'
 import { OurStory } from '../OurStory'
+import { VisionComponent } from '../VisionComponent'
+import { WhyChooseUs } from '../WhyChooseUs'
 
 export const Page = () => {
   return (
@@ -14,6 +18,10 @@ export const Page = () => {
       />
       <AchievementGrid />
       <OurStory />
+      <AboutContact />
+      <VisionComponent />
+      <CompanyDetails />
+      <WhyChooseUs />
     </>
   )
 }
