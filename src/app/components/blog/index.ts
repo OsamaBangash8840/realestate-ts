@@ -1,3 +1,5 @@
 export * from './BlogsCard'
 export * from './BlogList'
 export * from './BlogsGrid'
+export * from './Page'
+export * from './SingleBlog'

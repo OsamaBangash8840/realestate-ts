@@ -151,6 +151,27 @@
   }
 }
 
+@layer base {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    background-color: transparent !important;
+    transition: background-color 9999s ease-in-out 0s !important;
+  }
+
+  /* White autofill text */
+  .autofill-white:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+  }
+
+  /* Secondary autofill text */
+  .autofill-secondary:-webkit-autofill {
+    -webkit-text-fill-color: #6b7280 !important; /* adjust to match your secondary color */
+  }
+}
+
 /* @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
