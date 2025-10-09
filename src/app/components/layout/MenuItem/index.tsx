@@ -32,7 +32,7 @@ export const MenuItem = ({
               variant="large"
               weight="medium"
               color="custom"
-              customColor="text-white"
+              customColor="text-secondary-500"
               className={` hover:text-white/50 uppercase`}
             >
               {item.title}

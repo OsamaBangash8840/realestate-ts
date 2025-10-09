@@ -18,10 +18,10 @@ export const HomeBanner = () => {
           <div
             className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
             style={{
-              backgroundImage: `url('/home/banner1.jpg')`, // Fixed: Added url() wrapper
+              backgroundImage: `url('/home/banner4.png')`, // Fixed: Added url() wrapper
             }}
           >
-            <div className="bg-primary-500/40 sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg">
+            <div className=" sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg">
               <Typography
                 variant="large"
                 weight="regular"
@@ -50,10 +50,10 @@ export const HomeBanner = () => {
           <div
             className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
             style={{
-              backgroundImage: `url('/home/banner4.jpg')`, // Fixed: Added url() wrapper
+              backgroundImage: `url('/home/banner4.png')`, // Fixed: Added url() wrapper
             }}
           >
-            <div className="bg-primary-500/40 sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg">
+            <div className=" sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg">
               <Typography
                 variant="large"
                 weight="regular"
@@ -82,10 +82,10 @@ export const HomeBanner = () => {
           <div
             className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
             style={{
-              backgroundImage: `url('/home/banner5.jpg')`, // Fixed: Added url() wrapper
+              backgroundImage: `url('/home/banner4.png')`, // Fixed: Added url() wrapper
             }}
           >
-            <div className="bg-primary-500/40 sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg">
+            <div className=" sm:py-3 px-4 py-1.5 w-[390px] sm:w-[600px] rounded-lg">
               <Typography
                 variant="large"
                 weight="regular"

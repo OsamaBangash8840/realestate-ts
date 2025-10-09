@@ -25,7 +25,7 @@ export const LoginComponent = () => {
             alt="Logo"
             width={60}
             height={60}
-            className="sm:w-[30%] w-[50%] mx-auto mt-8 2xl:mt-10"
+            className="sm:w-[30%] w-[50%] mx-auto mt-16 mb-12 2xl:mt-10"
           />
           <Typography variant="large" className=" text-center -mt-8 uppercase">
             Login

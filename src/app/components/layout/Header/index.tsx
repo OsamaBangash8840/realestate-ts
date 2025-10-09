@@ -179,7 +179,7 @@ export const Header = () => {
           <ToggleTheme />
         </div>
       </section>
-      <nav className="bg-gradient-to-l from-navBgOne via-navBgTwo to-navBgThree flex justify-between items-center px-3 sm:px-16 navShadow shadow-2xl">
+      <nav className=" flex justify-between items-center px-3 sm:px-16 navShadow  pt-3">
         {/* Mobile Menu Button */}
         <div className="sm:hidden flex">
           <button onClick={toggleMobileMenu} className="lg:hidden text-white p-2">
@@ -196,19 +196,19 @@ export const Header = () => {
         <Image
           src="/authentication/logo.svg"
           alt="Logo"
-          width={60}
-          height={60}
-          className=" w-[40%] sm:w-[22%] sm:h-[180px] -my-9 sm:-ml-24 hidden sm:block"
+          width={100}
+          height={100}
+          className=" w-[231px] h-[60px] -ml-10  hidden sm:block"
         />
         <div className="hidden lg:block">
-          <ul className="flex gap-12 -ml-24">
+          <ul className="flex gap-12 ">
             {menuItems.map((item, index) => (
               <MenuItem key={index} item={item} hideMenu={hideMenu} />
             ))}
           </ul>
         </div>
         <div className="flex items-center gap-2">
-          <CiSearch size={24} className="text-white" />
+          <CiSearch size={24} className="text-secondary-500" />
         </div>
       </nav>
     </>
