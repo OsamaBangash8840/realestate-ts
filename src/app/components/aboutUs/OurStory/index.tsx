@@ -5,14 +5,16 @@ export const OurStory = () => {
   return (
     <>
       <section className="sm:flex gap-5 items-center sm:px-16 px-3 mt-6">
-        <Image
-          src={'/home/banner4.jpg'}
-          alt="Our Story"
-          width={600}
-          height={500}
-          className="w-full rounded-lg"
-        />
-        <div>
+        <div className="flex-1">
+          <Image
+            src={'/home/aboutOurStory.svg'}
+            alt="Our Story"
+            width={600}
+            height={500}
+            className="w-full rounded-lg"
+          />
+        </div>
+        <div className="flex-1">
           <Typography variant="medium" className=" uppercase mt-1">
             OUR STORY
           </Typography>
@@ -27,7 +29,7 @@ export const OurStory = () => {
           </Typography>
           <Typography variant="large" className="mt-2">
             We focus on engineering our tanks with premium, safe, and sustainable materials designed
-            to withstand Dubai’s demanding climate. Whether for residential, commercial, or
+            to withstand Dubais demanding climate. Whether for residential, commercial, or
             industrial applications, PolySave ensures that water storage is both smart and
             dependable.
           </Typography>

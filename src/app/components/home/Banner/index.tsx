@@ -28,10 +28,10 @@ export const HomeBanner = () => {
                 color="primaryBody"
                 className="uppercase"
               >
-                Find Your Dream Home
+                POLYSAVE A TRUSTED PARTNER
               </Typography>
               <Typography variant="h4" weight="bold" color="primaryBody" className="sm:mt-2 mt-1">
-                Find Your Perfect Home.
+                Built to Last. Engineered for Your Life.
               </Typography>
               <Typography
                 variant="large"
@@ -39,13 +39,13 @@ export const HomeBanner = () => {
                 color="primaryBody"
                 className=" sm:mt-2 mt-1"
               >
-                Discover premium properties designed for modern living. Whether it’s an apartment,
-                villa, or farmhouse — your dream home is just a click away.
+                Premium, durable water and storage tanks designed for homes, farms, and industry.
+                Get cleaner water and unwavering reliability.
               </Typography>
-              <Button title="Browse Properties" className="sm:mt-6 mt-3" />
+              <Button title="Shop Products" className="sm:mt-6 mt-3" />
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide>{' '}
         <SwiperSlide>
           <div
             className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
@@ -60,10 +60,10 @@ export const HomeBanner = () => {
                 color="primaryBody"
                 className="uppercase"
               >
-                Invest with Confidence
+                POLYSAVE A TRUSTED PARTNER
               </Typography>
               <Typography variant="h4" weight="bold" color="primaryBody" className="sm:mt-2 mt-1">
-                Smart Investments. Endless Possibilities.
+                Built to Last. Engineered for Your Life.
               </Typography>
               <Typography
                 variant="large"
@@ -71,13 +71,13 @@ export const HomeBanner = () => {
                 color="primaryBody"
                 className=" sm:mt-2 mt-1"
               >
-                Explore properties with high rental yield and long-term value. From commercial
-                spaces to residential plots, make secure investments today.
+                Premium, durable water and storage tanks designed for homes, farms, and industry.
+                Get cleaner water and unwavering reliability.
               </Typography>
-              <Button title="Start Investing" className="sm:mt-6 mt-3" />
+              <Button title="Shop Products" className="sm:mt-6 mt-3" />
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide>{' '}
         <SwiperSlide>
           <div
             className="bg-secondary h-[450px] md:h-[580px] 2xl:h-[700px] w-full gap-5 bg-cover bg-center bg-no-repeat sm:px-12 sm:pt-48 pt-12"
@@ -92,21 +92,21 @@ export const HomeBanner = () => {
                 color="primaryBody"
                 className="uppercase"
               >
-                Rent Made Easy
+                POLYSAVE A TRUSTED PARTNER
               </Typography>
               <Typography variant="h4" weight="bold" color="primaryBody" className="sm:mt-2 mt-1">
-                Find Rentals That Fit Your Life.
+                Built to Last. Engineered for Your Life.
               </Typography>
               <Typography
                 variant="large"
                 weight="regular"
                 color="primaryBody"
-                className="sm:mt-2 mt-1"
+                className=" sm:mt-2 mt-1"
               >
-                Affordable, flexible, and verified rental listings for families, professionals, and
-                students. Move into your new home with ease and confidence.
+                Premium, durable water and storage tanks designed for homes, farms, and industry.
+                Get cleaner water and unwavering reliability.
               </Typography>
-              <Button title="View Rentals" className="sm:mt-6 mt-3" />
+              <Button title="Shop Products" className="sm:mt-6 mt-3" />
             </div>
           </div>
         </SwiperSlide>

@@ -1,7 +1,6 @@
 'use client'
 
 import { IMenuItem } from '@/app/base/types'
-import { Typography } from '@/app/components/common'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -28,15 +27,11 @@ export const MenuItem = ({
             }`}
           >
             {item.icon}
-            <Typography
-              variant="large"
-              weight="medium"
-              color="custom"
-              customColor="text-secondary-500"
-              className={` hover:text-white/50 uppercase`}
+            <p
+              className={` text-base font-medium text-secondary-500 hover:text-secondary-300 uppercase`}
             >
               {item.title}
-            </Typography>
+            </p>
           </div>
         </div>
       </Link>

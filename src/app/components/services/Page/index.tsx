@@ -8,7 +8,7 @@ export const Services = () => {
   return (
     <section className="">
       <Banner
-        bg="/home/banner2.jpg"
+        bg="/home/servicesBannerImg.svg"
         smallHeading="OUR SERVICES"
         lgHeading="Expert Tank Cleaning. Guaranteed Purity"
         desc="Protect your health and your investment. Our professional cleaning and disinfection services eliminate harmful bacteria, sediment, and contaminants to ensure your water is always safe and clean."

@@ -8,6 +8,8 @@ import { FaFacebookF } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
+import Link from 'next/link'
+import { routes } from '@/app/base/constants'
 
 export const Footer = () => {
   return (
@@ -18,20 +20,24 @@ export const Footer = () => {
           <div className="sm:grid grid-cols-4  pb-5">
             {/* {Section 1} */}
             <div>
-              <Image
-                src="/authentication/logo.svg"
-                alt="Logo"
-                width={60}
-                height={60}
-                className=" w-[70%] -ml-16 -my-9 sm:hidden block"
-              />
-              <Image
-                src="/authentication/logo.svg"
-                alt="Logo"
-                width={60}
-                height={60}
-                className=" w-[60%] -my-9 -ml-12 hidden sm:block"
-              />
+              <Link href={routes.home}>
+                <Image
+                  src="/authentication/logo.svg"
+                  alt="Logo"
+                  width={60}
+                  height={60}
+                  className=" w-[40%] sm:hidden block"
+                />
+              </Link>
+              <Link href={routes.home}>
+                <Image
+                  src="/authentication/logo.svg"
+                  alt="Logo"
+                  width={60}
+                  height={60}
+                  className=" w-[60%] hidden sm:block"
+                />
+              </Link>
               <Typography
                 variant="xlarge"
                 color="custom"
@@ -80,11 +86,21 @@ export const Footer = () => {
                 Quick Links
               </Typography>
               <ul className=" space-y-8 mt-3">
-                <li>Home</li>
-                <li>Properties</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
+                <Link href={routes.home}>
+                  <li className="mt-5">Home</li>
+                </Link>
+                <Link href={routes.product}>
+                  <li className="mt-5">Prodcuts</li>
+                </Link>
+                <Link href={routes.about}>
+                  <li className="mt-5">About</li>
+                </Link>
+                <Link href={routes.services}>
+                  <li className="mt-5">Services</li>
+                </Link>
+                <Link href={routes.home}>
+                  <li className="mt-5">Projects</li>
+                </Link>
               </ul>
             </div>
             {/* {Section 3} */}
@@ -93,10 +109,18 @@ export const Footer = () => {
                 Company
               </Typography>
               <ul className=" space-y-8 mt-3">
-                <li>Home</li>
-                <li>Properties</li>
-                <li>About</li>
-                <li>Services</li>
+                <Link href={routes.home}>
+                  <li className="mt-5">Home</li>
+                </Link>
+                <Link href={routes.product}>
+                  <li className="mt-5">Products</li>
+                </Link>
+                <Link href={routes.about}>
+                  <li className="mt-5">About</li>
+                </Link>
+                <Link href={routes.services}>
+                  <li className="mt-5">Services</li>
+                </Link>
               </ul>
             </div>
             {/* {Section 4} */}

@@ -16,13 +16,29 @@ export const CartItem = ({ item }: CartItemProps) => {
   const [number, setNumber] = useState(0)
   return (
     <div className="flex px-0.5 mt-3 py-2 gap-5 sm:gap-10 rounded-[14px] shadow-one">
-      <div className="relative flex-shrink-0">
+      <div className="relative flex-shrink-0 bg-gray-50 rounded-2xl px-5">
+        <div className="flex justify-between items-center">
+          <Image
+            src={'/home/warrantyImg.svg'}
+            alt={'Product image'}
+            width={400}
+            height={190}
+            className="w-[40px] h-[40px]"
+          />
+          <Image
+            src={'/home/uaeImg.svg'}
+            alt={'Product image'}
+            width={400}
+            height={190}
+            className="w-[40px] h-[40px]"
+          />
+        </div>
         <Image
           src={item.image}
           alt={item.title}
           width={250}
           height={200}
-          className="object-cover rounded-2xl w-[160px] h-[190px] sm:w-[250px] sm:h-[200px]"
+          className="object-cover rounded-2xl w-[120px] h-[100px] sm:w-[195px] sm:h-[160px]"
         />
       </div>
 

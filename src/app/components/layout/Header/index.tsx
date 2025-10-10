@@ -13,13 +13,16 @@ import { RxCross2 } from 'react-icons/rx'
 import { HiMenu } from 'react-icons/hi'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { CiShoppingCart } from 'react-icons/ci'
+import { routes } from '@/app/base/constants'
 
 const menuItems: IMenuItem[] = [
   { title: 'Home', path: '/' },
-  { title: 'Listings', path: '/profile' },
-  { title: 'About', path: '/settings' },
-  { title: 'Services', path: '/settings' },
-  { title: 'Contact', path: '/settings' },
+  { title: 'Products', path: '/products/polysave-hd-water-tanksappartments' },
+  { title: 'About', path: '/about' },
+  { title: 'Services', path: '/services' },
+  { title: 'Blogs', path: '/blogs' },
+  { title: 'Contact', path: '/contact' },
 ]
 
 interface IMobileMenu {
@@ -144,24 +147,28 @@ export const Header = () => {
           </div>
         </div>
         <div className="flex gap-5 items-center">
-          <Typography
-            color="custom"
-            customColor="text-white"
-            variant="medium"
-            weight="regular"
-            className="uppercase"
-          >
-            Sign Up
-          </Typography>
-          <Typography
-            color="custom"
-            customColor="text-white"
-            variant="medium"
-            weight="regular"
-            className="uppercase"
-          >
-            Login
-          </Typography>
+          <Link href={routes.register}>
+            <Typography
+              color="custom"
+              customColor="text-white"
+              variant="medium"
+              weight="regular"
+              className="uppercase"
+            >
+              Sign Up
+            </Typography>
+          </Link>
+          <Link href={routes.login}>
+            <Typography
+              color="custom"
+              customColor="text-white"
+              variant="medium"
+              weight="regular"
+              className="uppercase"
+            >
+              Login
+            </Typography>
+          </Link>
           {/* <div className="flex items-center gap-2 p-2 hidden"> */}
           <div className=" items-center gap-2 p-2 hidden">
             <RxAvatar size={24} className="text-white" />
@@ -179,18 +186,18 @@ export const Header = () => {
           <ToggleTheme />
         </div>
       </section>
-      <nav className=" flex justify-between items-center px-3 sm:px-16 navShadow  pt-3">
+      <nav className=" flex justify-between items-center px-3 sm:px-16 navShadow  pt-5 py-3">
         {/* Mobile Menu Button */}
-        <div className="sm:hidden flex">
-          <button onClick={toggleMobileMenu} className="lg:hidden text-white p-2">
-            <HiMenu size={24} className=" cursor-pointer" />
+        <div className="sm:hidden flex items-center gap-3">
+          <button onClick={toggleMobileMenu} className="lg:hidden text-secondary-500 p-2">
+            <HiMenu size={28} className=" cursor-pointer -mt-3" />
           </button>
           <Image
             src="/authentication/logo.svg"
             alt="Logo"
             width={60}
             height={60}
-            className=" w-[80%] h-[180px] -my-9 -ml-4 "
+            className=" w-[123px] h-[32pxpx]  -ml-4 "
           />
         </div>
         <Image
@@ -209,6 +216,9 @@ export const Header = () => {
         </div>
         <div className="flex items-center gap-2">
           <CiSearch size={24} className="text-secondary-500" />
+          <Link href={routes.cart}>
+            <CiShoppingCart size={24} className="text-secondary-500" />
+          </Link>
         </div>
       </nav>
     </>

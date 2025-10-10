@@ -2,6 +2,8 @@ import { IPropertyItems } from '@/app/base/types'
 import Image from 'next/image'
 import { FaRegHeart, FaStar } from 'react-icons/fa'
 import { Typography } from '../../common'
+import Link from 'next/link'
+import { routes } from '@/app/base/constants'
 
 interface IPropertyProps {
   property: IPropertyItems
@@ -24,14 +26,33 @@ export const PropertiesCard = ({ property }: IPropertyProps) => {
   return (
     <div className="">
       <div className="relative">
-        <Image
-          src={property.image || '/placeholder.jpg'}
-          alt={property.title || 'Product image'}
-          width={400}
-          height={190}
-          className="w-[400px] h-[190px] 2xl:w-full 2xl:h-[220px] rounded-2xl object-cover"
-        />
-
+        <div className="bg-gray-50 rounded-2xl">
+          <div className="flex justify-center items-center">
+            <Image
+              src={property.image || '/placeholder.jpg'}
+              alt={property.title || 'Product image'}
+              width={400}
+              height={190}
+              className="w-[280px] h-[230px] 2xl:w-full 2xl:h-[220px] rounded-2xl object-cover mt-10"
+            />
+          </div>
+          <div className="flex justify-between items-center px-4">
+            <Image
+              src={'/home/warrantyImg.svg'}
+              alt={property.title || 'Product image'}
+              width={400}
+              height={190}
+              className="w-[50px] h-[50px]"
+            />
+            <Image
+              src={'/home/uaeImg.svg'}
+              alt={property.title || 'Product image'}
+              width={400}
+              height={190}
+              className="w-[50px] h-[50px]"
+            />
+          </div>
+        </div>
         {discountPercentage > 0 && (
           <div className="absolute top-2 left-4 bg-primary-500 text-white px-2 py-1 rounded-full text-xs">
             <Typography
@@ -62,10 +83,11 @@ export const PropertiesCard = ({ property }: IPropertyProps) => {
             className="cursor-pointer text-secondary-500 hover:text-red-500 mr-2"
           />
         </div>
-
-        <Typography variant="h6" weight="bold" color="custom" customColor="text-secondary-500">
-          {property.title || 'Untitled Product'}
-        </Typography>
+        <Link href={routes.singleProduct}>
+          <Typography variant="h6" weight="bold" color="custom" customColor="text-secondary-500">
+            {property.title || 'Untitled Product'}
+          </Typography>
+        </Link>
 
         <div className="flex items-center gap-2 mt-2">
           <div className="flex items-center">

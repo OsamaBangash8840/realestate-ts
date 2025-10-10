@@ -2,6 +2,8 @@
 import { usePathname } from 'next/navigation'
 import { Button, Typography } from '../../common'
 import { IoShieldOutline } from 'react-icons/io5'
+import Link from 'next/link'
+import { routes } from '@/app/base/constants'
 
 interface PriceBreakdownProps {
   subtotal: number
@@ -70,7 +72,9 @@ export function PriceBreakdown({ subtotal, discount, tax, total }: PriceBreakdow
         </div>
       </div>
       {pathname === '/cart' ? (
-        <Button title="Proceed to Checkout" className="w-full mt-5" />
+        <Link href={routes.checkout}>
+          <Button title="Proceed to Checkout" className="w-full mt-5" />
+        </Link>
       ) : (
         <>
           <Button title="Place Order" className="w-full mt-5" />

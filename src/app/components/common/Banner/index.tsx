@@ -7,6 +7,8 @@ import { FaPhoneAlt } from 'react-icons/fa'
 import { GoMail } from 'react-icons/go'
 import { usePathname } from 'next/navigation'
 import { CiLocationOn } from 'react-icons/ci'
+import Link from 'next/link'
+import { routes } from '@/app/base/constants'
 
 interface ITextFieldProps {
   bg?: string
@@ -33,11 +35,11 @@ export const Banner = ({
         backgroundImage: `url(${bg})`, // ✅ Correct syntax
       }}
     >
-      <div className="-mt-10 sm:-mt-0 py-3 sm:py-0">
+      <div className="-mt-10 sm:-mt-0 py-3 px-3 sm:py-0">
         <Breadcrumbs variant="secondary" />
       </div>
 
-      <div className="bg-primary-500/40 sm:py-3 px-3 py-1.5 w-[390px] sm:w-[600px] rounded-lg  sm:mt-20">
+      <div className=" sm:py-3 px-3 py-1.5 w-[390px] sm:w-[600px] rounded-lg  sm:mt-20">
         {smallHeading && (
           <Typography variant="large" weight="regular" color="primaryBody" className="uppercase">
             {smallHeading}
@@ -56,7 +58,11 @@ export const Banner = ({
           </Typography>
         )}
 
-        {btn && <Button title={btn} className="sm:mt-6 mt-3" />}
+        {btn && (
+          <Link href={routes.contact}>
+            <Button title={btn} className="sm:mt-6 mt-3" />
+          </Link>
+        )}
         {pathname === '/contact' && (
           <>
             <div className="gap-2 flex items-center mt-3">

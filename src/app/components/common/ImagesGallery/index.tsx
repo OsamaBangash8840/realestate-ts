@@ -48,16 +48,34 @@ export const ImagesGallery: React.FC<ImagesGalleryProps> = ({ images }) => {
                 setOpenLightbox(true)
               }}
               key={index}
-              className="cursor-pointer w-full h-[350px] md:h-[250px] xl:h-[450px] rounded-2xl overflow-hidden"
+              className="cursor-pointer w-full h-[350px] md:h-[250px] xl:h-[450px] overflow-hidden bg-gray-50 rounded-2xl"
             >
-              <Image
-                src={image}
-                alt={`Property image ${index + 1}`}
-                width={600}
-                height={450}
-                className="w-full h-full md:h-[250px] xl:h-full rounded-2xl object-cover"
-                priority={index === 0}
-              />
+              <div className="flex justify-between items-center px-4">
+                <Image
+                  src={'/home/warrantyImg.svg'}
+                  alt={'Product image'}
+                  width={400}
+                  height={190}
+                  className="w-[70px] h-[70px]"
+                />
+                <Image
+                  src={'/home/uaeImg.svg'}
+                  alt={'Product image'}
+                  width={400}
+                  height={190}
+                  className="w-[70px] h-[70px]"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <Image
+                  src={image}
+                  alt={`Property image ${index + 1}`}
+                  width={600}
+                  height={450}
+                  className="sm:w-[425px] sm:h-[350px] w-[329px] h-[271px] object-cover"
+                  priority={index === 0}
+                />
+              </div>
             </div>
           ))}
         </Slider>
@@ -78,47 +96,82 @@ export const ImagesGallery: React.FC<ImagesGalleryProps> = ({ images }) => {
           {images.map((image, i) => (
             <div
               key={i}
-              className={`inline-block cursor-pointer focus:outline-none relative rounded-2xl overflow-hidden min-w-[100px] max-w-[120px] ${
+              className={`inline-block cursor-pointer focus:outline-none relative bg-gray-50 rounded-2xl overflow-hidden min-w-[100px] max-w-[160px] py-3 ${
                 activeSlide !== i &&
-                'before:content-[""] before:absolute before:inset-0 before:w-full before:h-full before:bg-black/60'
+                'before:content-[""] before:absolute before:inset-0 before:w-full before:h-full'
               }`}
               onClick={() => {
                 ref.current?.slickGoTo(i)
                 setActiveSlide(i)
               }}
             >
-              <Image
-                src={image}
-                alt={`Thumbnail ${i + 1}`}
-                width={120}
-                height={90}
-                className="w-[100px] h-[75px] rounded-2xl object-cover"
-              />
+              <div className="flex justify-between items-center px-2">
+                <Image
+                  src={'/home/warrantyImg.svg'}
+                  alt={'Product image'}
+                  width={400}
+                  height={190}
+                  className="w-[25px] h-[25px]"
+                />
+                <Image
+                  src={'/home/uaeImg.svg'}
+                  alt={'Product image'}
+                  width={400}
+                  height={190}
+                  className="w-[25px] h-[25px]"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <Image
+                  src={image}
+                  alt={`Thumbnail ${i + 1}`}
+                  width={120}
+                  height={90}
+                  className="w-[100px] h-[75px] rounded-2xl object-cover"
+                />
+              </div>
             </div>
           ))}
         </div>
-
         {/* Desktop: grid layout */}
         <div className="hidden sm:flex flex-wrap justify-center gap-5">
           {images.map((image, i) => (
             <div
               key={i}
-              className={`flex-1 min-w-[150px] max-w-[180px] cursor-pointer focus:outline-none relative rounded-2xl overflow-hidden ${
+              className={`flex-1 min-w-[150px] max-w-[180px] cursor-pointer focus:outline-none relative bg-gray-50 rounded-2xl overflow-hidden ${
                 activeSlide !== i &&
-                'before:content-[""] before:absolute before:inset-0 before:w-full before:h-full before:bg-black/60'
+                'before:content-[""] before:absolute before:inset-0 before:w-full before:h-full'
               }`}
               onClick={() => {
                 ref.current?.slickGoTo(i)
                 setActiveSlide(i)
               }}
             >
-              <Image
-                src={image}
-                alt={`Thumbnail ${i + 1}`}
-                width={160}
-                height={110}
-                className="w-full h-[110px] md:h-[120px] rounded-2xl object-cover"
-              />
+              <div className="flex justify-between items-center px-4">
+                <Image
+                  src={'/home/warrantyImg.svg'}
+                  alt={'Product image'}
+                  width={400}
+                  height={190}
+                  className="w-[30px] h-[30px]"
+                />
+                <Image
+                  src={'/home/uaeImg.svg'}
+                  alt={'Product image'}
+                  width={400}
+                  height={190}
+                  className="w-[30px] h-[30px]"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <Image
+                  src={image}
+                  alt={`Thumbnail ${i + 1}`}
+                  width={160}
+                  height={110}
+                  className="w-[140px] h-[120px] md:h-[120px] rounded-2xl object-cover"
+                />
+              </div>
             </div>
           ))}
         </div>

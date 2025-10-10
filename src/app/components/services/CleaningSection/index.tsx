@@ -6,7 +6,7 @@ export const CleaningSection = () => {
     <>
       <section className="sm:flex gap-5 items-center sm:px-16 px-3 mt-6">
         <Image
-          src={'/home/banner2.jpg'}
+          src={'/home/cleaningImg.svg'}
           alt="Our Story"
           width={600}
           height={500}

@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import { Button, Typography } from '../../common'
+import { routes } from '@/app/base/constants'
 
 export const AboutContact = () => {
   return (
@@ -22,7 +24,9 @@ export const AboutContact = () => {
             business forward.
           </Typography>
         </div>
-        <Button title="Contact Us" className="mt-6 sm:mt-0 w-full sm:w-auto" />
+        <Link href={routes.contact}>
+          <Button title="Contact Us" className="mt-6 sm:mt-0 w-full sm:w-auto" />
+        </Link>
       </div>
     </section>
   )

@@ -11,6 +11,8 @@ import { SpecificationsGrid } from '../SpecificationsGrid'
 import { TestimonialPropertyCard } from '../../home'
 import { SwiperSlide } from 'swiper/react'
 import { PropertiesCard } from '../PropertiesCard'
+import Link from 'next/link'
+import { routes } from '@/app/base/constants'
 
 interface SinglePropertyProps {
   property: IPropertyItems
@@ -89,9 +91,13 @@ export const SingleProperty = ({ property }: SinglePropertyProps) => {
           </Typography>
           <div className="flex gap-2 mt-4">
             <Counter number={number} setNumber={setNumber} />
-            <Button title="Add to Cart" variant="cart" className="w-full" />
+            <Link href={routes.cart} className="w-full">
+              <Button title="Add to Cart" variant="cart" className="w-full" />
+            </Link>
           </div>
-          <Button title="Buy Now" variant="primary" className="w-full mt-6" />
+          <Link href={routes.checkout}>
+            <Button title="Buy Now" variant="primary" className="w-full mt-6" />
+          </Link>
           <FeaturesList />
           <div className="px-6 mt-1">
             <Typography variant="h5" weight="bold">

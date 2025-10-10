@@ -8,7 +8,7 @@ export const CompanyDetails = () => {
         <div
           className="relative sm:w-1/2 h-96 bg-cover bg-center bg-no-repeat flex items-center justify-center rounded-lg"
           style={{
-            backgroundImage: "url('/home/banner1.jpg')",
+            backgroundImage: "url('/home/aboutCompanyImg.svg')",
           }}
         >
           {/* Overlay color */}

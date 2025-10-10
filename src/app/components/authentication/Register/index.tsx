@@ -3,6 +3,8 @@ import { Button, PasswordField, TextField, Typography } from '../../common'
 import { IoPersonOutline } from 'react-icons/io5'
 import { FaGoogle } from 'react-icons/fa'
 import { GoMail } from 'react-icons/go'
+import { routes } from '@/app/base/constants'
+import Link from 'next/link'
 
 export const Register = () => {
   return (
@@ -21,13 +23,15 @@ export const Register = () => {
 
         {/* Right Content */}
         <div className="sm:w-1/2 flex flex-col">
-          <Image
-            src="/authentication/logo.svg"
-            alt="Logo"
-            width={60}
-            height={60}
-            className="sm:w-[30%] w-[50%] mx-auto mt-16 mb-12 2xl:mt-10"
-          />
+          <Link href={routes.home}>
+            <Image
+              src="/authentication/logo.svg"
+              alt="Logo"
+              width={60}
+              height={60}
+              className="sm:w-[30%] w-[50%] mx-auto mt-16 mb-12 2xl:mt-10"
+            />
+          </Link>
           <Typography variant="large" className=" text-center -mt-8 uppercase">
             Register
           </Typography>

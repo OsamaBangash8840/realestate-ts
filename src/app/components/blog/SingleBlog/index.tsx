@@ -29,7 +29,7 @@ export const SingleBlogComponent = () => {
         </div>
         <div className="sm:w-2/3 w-full">
           <Image
-            src={'/home/banner2.jpg'}
+            src={'/home/blogImg1.svg'}
             alt="Blog Img"
             width={1000}
             height={500}

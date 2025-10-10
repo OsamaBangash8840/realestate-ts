@@ -10,19 +10,19 @@ const posts: IBlogPostItems[] = [
     date: '12 March, 2025',
     readingTime: '5 min Reading',
     description: 'Ready to save water and money? This beginner’s guide walks you through...',
-    image: '/home/banner1.jpg',
+    image: '/home/blogImg2.svg',
   },
   {
     id: 2,
     title: '5 Essential Maintenance Tips to Keep Your Water Tank Clean for Decades',
     date: '12 March, 2025',
-    image: '/home/banner2.jpg',
+    image: '/home/blogImg3.svg',
   },
   {
     id: 3,
     title: '5 Essential Maintenance Tips to Keep Your Water Tank Clean for Decades',
     date: '12 March, 2025',
-    image: '/home/banner2.jpg',
+    image: '/home/blogImg4.svg',
   },
 ]
 
@@ -52,7 +52,7 @@ export const BlogsGrid = () => {
         {/* Featured Blog */}
         <div className="w-full 2xl:w-1/2">
           <Image
-            src={'/home/banner1.jpg'}
+            src={'/home/blogImg1.svg'}
             alt="Blog Img 1"
             width={300}
             height={300}
