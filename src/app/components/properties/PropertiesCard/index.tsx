@@ -33,7 +33,7 @@ export const PropertiesCard = ({ property }: IPropertyProps) => {
               alt={property.title || 'Product image'}
               width={400}
               height={190}
-              className="w-[280px] h-[230px] 2xl:w-full 2xl:h-[220px] rounded-2xl object-cover mt-10"
+              className="w-[280px] h-[230px] 2xl:w-[340px] 2xl:h-[280px] rounded-2xl object-cover mt-10"
             />
           </div>
           <div className="flex justify-between items-center px-4">

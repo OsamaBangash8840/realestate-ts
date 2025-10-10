@@ -1,6 +1,8 @@
 'use client'
 import { SwiperSlide } from 'swiper/react'
 import { Button, CustomSwiper, Typography } from '../../common'
+import Link from 'next/link'
+import { routes } from '@/app/base/constants'
 
 export const HomeBanner = () => {
   return (
@@ -42,7 +44,9 @@ export const HomeBanner = () => {
                 Premium, durable water and storage tanks designed for homes, farms, and industry.
                 Get cleaner water and unwavering reliability.
               </Typography>
-              <Button title="Shop Products" className="sm:mt-6 mt-3" />
+              <Link href={routes.product}>
+                <Button title="Shop Products" className="sm:mt-6 mt-3" />
+              </Link>
             </div>
           </div>
         </SwiperSlide>{' '}
@@ -74,7 +78,9 @@ export const HomeBanner = () => {
                 Premium, durable water and storage tanks designed for homes, farms, and industry.
                 Get cleaner water and unwavering reliability.
               </Typography>
-              <Button title="Shop Products" className="sm:mt-6 mt-3" />
+              <Link href={routes.product}>
+                <Button title="Shop Products" className="sm:mt-6 mt-3" />
+              </Link>
             </div>
           </div>
         </SwiperSlide>{' '}
@@ -106,7 +112,9 @@ export const HomeBanner = () => {
                 Premium, durable water and storage tanks designed for homes, farms, and industry.
                 Get cleaner water and unwavering reliability.
               </Typography>
-              <Button title="Shop Products" className="sm:mt-6 mt-3" />
+              <Link href={routes.product}>
+                <Button title="Shop Products" className="sm:mt-6 mt-3" />
+              </Link>
             </div>
           </div>
         </SwiperSlide>

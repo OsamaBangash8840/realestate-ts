@@ -28,7 +28,7 @@ export const ContactForm = () => {
           <TextField className="mt-3 sm:mt-0" placeholder="Subject" />
           <TextField className="mt-3 sm:mt-0" placeholder="Country" />
         </div>
-        <Button title="Send" variant="cart" />
+        <Button title="Send" variant="cart" className="w-full sm:w-auto" />
       </div>
     </section>
   )

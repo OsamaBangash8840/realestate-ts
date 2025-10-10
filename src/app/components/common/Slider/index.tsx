@@ -162,7 +162,7 @@ export const CustomSwiper: React.FC<CustomSwiperProps> = ({
           <>
             {isDefaultStyle ? (
               // Special handling for default style - both arrows in top-right corner
-              <div className="absolute top-[-20%] sm:top-[-14%] 2xl:top-[-10%] right-0 flex gap-2 z-50">
+              <div className="absolute top-[-13%] sm:top-[-14%] 2xl:top-[-10%] right-0 flex gap-2 z-50">
                 <button
                   className={arrowConfig.buttonClass}
                   onClick={goToPrevSlide}
