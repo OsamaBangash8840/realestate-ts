@@ -1,6 +1,7 @@
 import { CiShoppingCart } from 'react-icons/ci'
 import { Typography } from '../../common'
 import { SiMastercard } from 'react-icons/si'
+import { OrderHistoryTable } from '../OrderHistoryTable'
 
 const userData = {
   totalOrders: 31,
@@ -112,6 +113,13 @@ export const DashboardComponent = () => {
           </div>
         </div>
       </div>
+      <div className=" flex items-center justify-between mt-8 mb-4">
+        <Typography variant="h6" weight="bold">
+          Order History
+        </Typography>
+        <Typography variant="large">See All</Typography>
+      </div>
+      <OrderHistoryTable />
     </div>
   )
 }

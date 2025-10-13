@@ -17,13 +17,10 @@ export function Table<T>({ columns, data, rowKey, expandedRowRender }: ReusableT
   return (
     <div className="noScrollbar overflow-x-auto w-full">
       <table className="min-w-full text-[13px] text-left whitespace-nowrap">
-        <thead className="text-secondary/70 bg-gray-100">
+        <thead className="text-secondary-500 bg-gray-50 ">
           <tr>
             {columns.map((col, idx) => (
-              <th
-                key={idx}
-                className="py-3 px-4 font-bold text-sm text-textPrimaryBody whitespace-nowrap"
-              >
+              <th key={idx} className="py-4 px-4 font-light text-base whitespace-nowrap">
                 {col.header}
               </th>
             ))}
@@ -35,11 +32,11 @@ export function Table<T>({ columns, data, rowKey, expandedRowRender }: ReusableT
             return (
               <React.Fragment key={rowKey(item, index)}>
                 {/* Normal row */}
-                <tr className="border-b last:border-b-0 whitespace-nowrap bg-bgPrimary border-gray-200 dark:border-gray-100 hover:bg-gray-50 dark:hover:bg-bgSecondary transition">
+                <tr className="border-b last:border-b-0 whitespace-nowrap bg-bgPrimary border-[#F2F4F7] dark:border-gray-100 hover:bg-gray-50 dark:hover:bg-bgSecondary transition">
                   {columns.map((col, idx) => (
                     <td
                       key={idx}
-                      className="px-4 py-6 text-secondary/70 text-nowrap whitespace-nowrap font-inter"
+                      className="px-4 py-3 text-secondary/70 text-nowrap whitespace-nowrap font-inter"
                     >
                       {col.render ? col.render(item, index) : (item[col.key] as React.ReactNode)}
                     </td>
